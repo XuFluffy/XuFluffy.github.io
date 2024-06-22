@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galaxy Background Website</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+            height: 100vh; /* Ensure full viewport height */
+            display: flex;
+            flex-direction: column;
+        }
+        #video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensure the video covers the entire background */
+            z-index: -1;
+        }
+        .content {
+            flex: 1; /* Fill remaining space */
+            padding: 100px 20px;
+            text-align: center;
+            color: #fff;
+            position: relative;
+            z-index: 1;
+        }
+        .app-uni-artwork {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: left;
+            transition: transform 0.3s ease;
+            height: 100%; /* Ensure each item has equal height */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Align content vertically */
+        }
+        .app-uni-artwork:hover {
+            transform: translateY(-10px);
+        }
+        .app-uni-artwork-content {
+            flex: 1; /* Grow to fill remaining space */
+        }
+        .btn-download {
+            margin-top: auto; /* Push the download button to the bottom */
+        }
+    </style>
+</head>
+<body>
+    <!-- Video Background -->
+    <video id="video-background" autoplay muted loop>
+        <source src="file:///C:/Users/XuFluffy/Desktop/New%20folder/Aplications/bg.webm" type="video/webm">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Content -->
+    <div class="container-fluid text-center text-white content">
+        <h1 class="my-5">Welcome To XuFluffy`s Programming Site</h1>
+        <p class="lead mb-5">Explore the cosmos with our amazing content</p>
+
+        <div class="row justify-content-center">
+            <!-- Item 1 -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="app-uni-artwork">
+                    <div class="app-uni-artwork-featured-image">
+                        <img src="images/applications/recorder/rec.png" alt="Screen Recorder" class="img-fluid">
+                    </div>
+                    <div class="app-uni-artwork-content">
+                        <h2 class="uk-h6 uk-h4@m">Screen Recorder</h2>
+                        <div class="status-work-container">
+                            <span class="status-label">AMOUNT</span>
+                            <span class="uni-divider"></span>
+                            <span class="working-label">in progress</span>
+                        </div>
+                        <div class="status-work-container">
+                            <span class="status-label">STATUS</span>
+                            <span class="uni-divider"></span>
+                            <span class="working-label">WORKING</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary btn-lg btn-download">Download</a>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+    <!-- Bootstrap JS and dependencies
